@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Jornada Misturada</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(180deg, #0a000a 0%, #000000 100%);
+      color: #e63946;
+      font-family: 'Cinzel Decorative', serif;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    canvas#bgCanvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 60px 30px;
+    }
+
+    h1, h2 {
+      text-align: center;
+      text-shadow: 0 0 20px #ff0033aa;
+      animation: fadeInUp 1s ease forwards;
+      opacity: 0;
+      color: #ffccd5;
+    }
+
+    p, img {
+      opacity: 0;
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    section {
+      margin-bottom: 70px;
+    }
+
+    img {
+      display: block;
+      margin: 30px auto;
+      max-width: 300px;
+      border: 2px solid #ff0044;
+      box-shadow: 0 0 40px #ff003377;
+      border-radius: 8px;
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+    }
+
+    img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 60px #ff0033cc;
+    }
+
+    #topBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #880e4f;
+      color: white;
+      border: none;
+      padding: 12px 18px;
+      border-radius: 50px;
+      font-size: 14px;
+      cursor: pointer;
+      display: none;
+      box-shadow: 0 0 15px #ff1744aa;
+      transition: all 0.3s ease;
+      z-index: 10;
+    }
+
+    #topBtn:hover {
+      transform: translateY(-3px);
+      background-color: #ad1457;
+    }
+
+    footer {
+      text-align: center;
+      color: #ff99a0;
+      margin-top: 100px;
+    }
+
+    strong {
+      color: #ff7070;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+<canvas id="bgCanvas"></canvas>
+<main>
+  <h1>Jornada Misturada</h1>
+
+  <section>
+    <h2>O Começo — Novidade e Desconhecimento</h2>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNsQx3Z7DmLyaBgd8NT8PFa8nxEGLynKmSEQ&s" alt="O Louco - Tarô">
+    <p>O Louco do Tarô representa o início da jornada: uma pessoa que ainda não sabe para onde vai, cheia de potencial, mas também de incertezas.</p>
+    <p>Aqui, a pessoa com problemas emocionais se encontra perdida e desorientada, sentindo o peso do caos interno, sem saber qual caminho seguir.</p>
+    <p>No início, Dante ainda não entrou no Inferno — está na floresta escura, um símbolo do seu desespero, confusão e da sensação de estar perdido.</p>
+  </section>
+
+  <section>
+    <h2>A Queda — O Inferno de Dante / O Abismo Pessoal</h2>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2vg-bOqChxOk9VVLXTD7uMY_3KfQOUV_AWcNC9TOvfFDBkGLufHxi8-U7VqxaDbM8w4M&usqp=CAU">
+    <p>Atravessar o Inferno de Dante é enfrentar os próprios medos, dores, problemas e demônios internos — vícios, traumas, pensamentos autodestrutivos.</p>
+    <p>Para alguém com problemas emocionais, é o reconhecimento do sofrimento, o mergulho na dor para começar a entender a si mesmo.</p>
+    <p>O Louco começa a perceber que o caminho não será apenas uma brincadeira. A inocência se choca com a realidade.</p>
+  </section>
+
+  <section>
+    <h2>O Encontro com Guias e Sombras</h2>
+    <img src="https://www.meisterdrucke.pt/kunstwerke/500px/Gustave_Dore_-_Inferno_Canto_15_Brunetto_Latini_accosts_Dante_illustration_from_The_Divine_Com_-_(MeisterDrucke-628398).jpg">
+    <p>No Inferno e no Purgatório, Dante encontra várias figuras — algumas aliadas, como Virgílio, e outras que representam diferentes pecados, arrependimentos e caminhos de aprendizado.</p>
+    <p>Psicologicamente, essa etapa representa a terapia: o questionamento interno, o confronto com sombras — partes reprimidas, emoções difíceis, dores, medos.</p>
+    <p>O Louco aprende com esses encontros e começa a formar consciência, encontrando seres pelo caminho que lhe ensinam lições importantes.</p>
+  </section>
+
+  <section>
+    <h2>Elevação — O Purgatório como Processo de Cura</h2>
+    <img src="https://www.meisterdrucke.pt/kunstwerke/1260px/Domenico_di_Michelino_-_Dante_Alighieris_Divine_Comedy_detail_of_the_Purgatory_Hill_-_%28MeisterDrucke-1406049%29.jpg">
+    <p>Dante sobe a montanha do Purgatório, onde a purificação acontece.</p>
+    <p>Essa etapa simboliza a jornada de autocompaixão, perdão e reconstrução emocional — reconhecer o que aconteceu, entender que pode não ter sido sua culpa e que certas coisas não estavam sob seu controle.</p>
+    <p>O Louco amadurece: deixa de ser um tolo despreparado e começa a caminhar com mais consciência dos próprios passos.</p>
+  </section>
+
+  <section>
+    <h2>O Encontro com a Luz — O Paraíso e a Integração</h2>
+    <img src="https://literaturaebompravista.wordpress.com/wp-content/uploads/2021/07/dante-e-beatriz-de-ary-scheffer.jpg?w=298">
+    <p>Ao alcançar o Paraíso, Dante encontra a luz divina, que representa sabedoria, paz e união com o todo — encontra Beatriz, a quem tanto buscava.</p>
+    <p>Para quem enfrenta questões emocionais, esse é o momento da integração do eu, da resiliência e da aceitação plena. É quando se compreende a dor e, finalmente, se encontra a felicidade tão almejada.</p>
+    <p>O Louco já não é mais um iniciante: é um sábio que aceitou suas imperfeições e caminha com coragem, feliz com o que é e com o que tem.</p>
+  </section>
+
+  <section>
+    <h2>Transição — A Morte como Transformação</h2>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/RWS_Tarot_13_Death.jpg/960px-RWS_Tarot_13_Death.jpg">
+    <p>Na passagem do Inferno para o Purgatório, Dante não apenas muda de cenário — ele muda de si mesmo. Após enfrentar as dores do Inferno, chega ao território da purificação.</p>
+    <p>Esse momento de virada é representado pela carta da Morte no Tarô. A Morte fala de transformação profunda, não de fim absoluto.</p>
+    <p>Dante, ao sair do Inferno, deixa para trás suas dores mais escuras. Ele sai renascido, pronto para subir. Assim como na carta da Morte, passa por um rito de passagem: um corte necessário com o passado.</p>
+    <p>Na jornada emocional, esse é o momento em que a pessoa percebe que aquilo que parecia um colapso era, na verdade, o início de um recomeço.</p>
+    <p>O Louco, que antes caminhava sem saber, agora renasce com propósito. A inocência dá lugar à sabedoria, e o caos, à possibilidade de reconstrução.</p>
+    <p><strong>Nada termina: tudo se transforma.</strong></p>
+  </section>
+
+  <footer>
+    <p>Jornada Misturada &copy; 2025</p>
+    <p><strong>criado por max</strong></p>
+  </footer>
+</main>
+
+<button id="topBtn" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">&uarr; Topo</button>
+<script>
+  const canvas = document.getElementById("bgCanvas");
+  const ctx = canvas.getContext("2d");
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  let particles = [];
+  for (let i = 0; i < 70; i++) {
+    particles.push({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      r: Math.random() * 25 + 10,
+      dx: (Math.random() - 0.5) * 0.6,
+      dy: (Math.random() - 0.5) * 0.6,
+    });
+  }
+
+  function drawParticles() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = "rgba(255, 50, 90, 0.03)";
+    for (let p of particles) {
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+      p.x += p.dx;
+      p.y += p.dy;
+      if (p.x < 0 || p.x > canvas.width) p.dx *= -1;
+      if (p.y < 0 || p.y > canvas.height) p.dy *= -1;
+    }
+    requestAnimationFrame(drawParticles);
+  }
+
+  drawParticles();
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = 1;
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll("h1, h2, p, img").forEach(el => {
+    observer.observe(el);
+  });
+
+  const btn = document.getElementById("topBtn");
+  window.addEventListener("scroll", () => {
+    btn.style.display = window.scrollY > 400 ? "block" : "none";
+  });
+</script>
+</body>
+</html>
